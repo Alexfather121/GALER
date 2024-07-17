@@ -1,0 +1,225 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat:100,200,300,regular,500,600,700,800,900);
+
+:root {
+  box-sizing: border-box;
+}
+
+*, ::before, ::after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  --main_color:rgb(207, 198, 248);
+  box-sizing: inherit;
+  padding: 0;
+  margin: 0 auto;
+  font-family: Montserrat;
+}
+
+body,html {
+  width: 100%;
+  height: 100%;
+  background: repeating-linear-gradient(to right, transparent 0, transparent 8px, var(--main_color) 8px, var(--main_color) 122px, transparent 122px, transparent 127px), repeating-linear-gradient(180deg, transparent 0, transparent 8px, var(--main_color) 8px, var(--main_color) 122px, transparent 122px, transparent 127px), repeating-linear-gradient(180deg, rgb(249, 201, 139), rgb(249, 201, 139) 3px, transparent 3px, transparent 127px), repeating-linear-gradient(to right, rgb(249, 201, 139), rgb(249, 201, 139) 3px, var(--main_color) 3px, var(--main_color) 127px); /*background: #158e79;*/
+  margin: 0;
+  padding: 0;
+}
+
+.body__cover{
+  min-height: 100%;
+  background-color: rgb(243, 243, 253);
+  max-width: 1920px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  padding: 0 1rem;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 2rem;
+}
+.header{
+  display: flex;
+  width: calc(100% + 2rem);
+  min-height: 10rem;
+  margin: 0 -1rem;
+  padding: 0 1rem;
+  background-color: rgb(243, 243, 253);
+  border-radius: 2rem 2rem 0 0;
+  text-transform: uppercase;
+  color: rgb(28, 41, 41);
+  font-size: 5rem;
+  font-weight: bold;
+  justify-content: center;
+  align-items: center;
+  border: .5rem solid black;
+}
+
+.footer{
+  display: flex;
+  width: calc(100% + 2rem);
+  min-height: 10rem;
+  margin: 0 -1rem;
+  padding: 0 1rem;
+  background-color: rgb(243, 243, 253);
+  border-radius: 0 0 2rem 2rem;
+  text-transform: uppercase;
+  color: rgb(28, 41, 41);
+  font-size: 5rem;
+  font-weight: bold;
+  justify-content: center;
+  align-items: center;
+  border: .5rem solid black;
+}
+.block__table{
+  width: 100%;
+  border: 2px solid rgb(28, 41, 41);
+	table-layout: fixed;
+	width: 100%;
+	margin-bottom: 20px;
+}
+.block__table th {
+	font-weight: bold;
+	padding: 15px;
+	background: #efefef;
+	border: 1px solid #dddddd;
+}
+.block__table td{
+	padding: 15px 10px;
+	border: 1px solid #eee;
+	text-align: left;
+}
+.block__table tbody tr:nth-child(odd){
+	background: #fff;
+}
+.block__table tbody tr:nth-child(even){
+	background: #F7F7F7;
+}
+.category__link{
+  text-decoration: none;
+  color: rgb(28, 41, 41);
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.category__link:active{
+  color: red;
+}
+.photo_albom{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  margin: 3rem auto;
+}
+.photo_item{
+  max-width: 400px;
+  min-height: 550px;
+  margin: 1rem;
+  display: flex;
+  justify-content: space-around;
+  padding: 1rem 0;
+  flex-direction: column;
+  box-shadow: 6px 6px 18px rgb(28, 41, 41);
+}
+
+.photo_item >a{
+  display: block;
+  max-width: 300px;
+  margin: 1rem;
+  padding: 1rem;
+}
+.photo_item >a >img{
+  display: block;
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+}
+.photo_item >div{
+  margin: 1rem auto;
+}
+.back_btn{
+  padding: 1rem 2rem;
+  background-color: #dddddd;
+  color: rgb(28, 41, 41);
+  text-decoration: none;
+  font-weight: 700;
+  border: 2px solid rgb(28, 41, 41);
+  margin-bottom: 2rem;
+}
+.like_dislike{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.like_img, .dis_like_img{
+  width: 1.4rem;
+}
+.dis_like_img{
+  transform: rotate(180deg);
+}
+.modal{
+  display: none;
+  background-color: rgba(28, 41, 41, .65);
+  position: absolute;
+}
+
+.modal.active{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+}
+.modal > img{
+  max-width: 90%;
+  max-height: 90%;
+}
+.like_dislike > .like.active{
+  background-color: greenyellow;
+}
+.like_dislike > .like_dislike.active{
+  background-color: red;
+}
+.like_img.active{
+  background-color: greenyellow;
+}
+.dis_like_img.active{
+  background-color: red;
+}
+.btn{
+  padding: 1rem 2rem;
+  background-color: #dddddd;
+  color: rgb(28, 41, 41);
+  text-decoration: none;
+  font-weight: 700;
+  border: 2px solid rgb(28, 41, 41);
+  margin: 1rem;
+}
+
+.comment_item{
+  max-width: 500px;
+  min-width: 70%;
+  margin: .8rem;
+  display: flex;
+  justify-content: space-around;
+  padding: .8rem;
+  flex-direction: column;
+  font-weight: 700;
+  box-shadow: 6px 6px 18px rgb(28, 41, 41);
+}
+.comment_item > form, .comment_item > div{
+  margin: .5rem;
+  padding: 0;
+  display: block;
+}
+.hid{
+  display: none;
+}
+input{
+  margin: .8rem;
+}
+form{
+  display: flex;
+  flex-direction: column;
+}
